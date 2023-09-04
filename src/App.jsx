@@ -35,6 +35,7 @@ export default function App() {
     <Flex w="full" direction={"column"} align="center" gap={"10px"}>
       <NavBar />
       <Button onClick={toggleColorMode}>Switch to {toggleText} mode</Button>
+      Hello, World!
     </Flex>
   );
 }
