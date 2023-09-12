@@ -1,29 +1,18 @@
 import {
   Button,
   Flex,
-  Heading,
-  Spacer,
+  Text,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { NavBar } from "./components/NavBar";
 
-function NavBar() {
-  const navColor = useColorModeValue("gray.100", "gray.900");
-
+function Stat() {
   return (
-    <Flex
-      p="1em"
-      bg={navColor}
-      align="center"
-      w="full"
-      gap="10px"
-      direction="row"
-    >
-      <Heading size="md">Fartleker</Heading>
-      <Spacer />
-      <Button colorScheme="teal">Notifications</Button>
-      <Button colorScheme="orange">Log in</Button>
-    </Flex>
+    <>
+      <Text>Distance</Text>
+      <Text>Distance</Text>
+    </>
   );
 }
 
@@ -35,7 +24,7 @@ export default function App() {
     <Flex w="full" direction={"column"} align="center" gap={"10px"}>
       <NavBar />
       <Button onClick={toggleColorMode}>Switch to {toggleText} mode</Button>
-      Hello, World!
+      <Stat />
     </Flex>
   );
 }
