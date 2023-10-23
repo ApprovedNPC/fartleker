@@ -8,6 +8,8 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 
+import { Link, useNavigate } from "react-router-dom";
+
 export function NavBar() {
   const navColor = useColorModeValue("gray.100", "gray.900");
   const { toggleColorMode } = useColorMode();
@@ -30,6 +32,8 @@ export function NavBar() {
       <Button onClick={toggleColorMode} colorScheme="pink">
         Switch to {toggleText} mode
       </Button>
+      {/* <Link to="/register">Register</Link>
+      <Link to="/login">Login</Link> */}
       <Avatar name="Rocky Wu" src="" />
     </Flex>
   );

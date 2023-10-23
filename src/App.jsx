@@ -1,31 +1,54 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
 import { NavBar } from "./components/NavBar";
+import { Login } from "./components/login";
+import { Content } from "./components/content";
+import { Register } from "./components/register";
 
-function Stat() {
-  return (
-    <>
-      <Text>Distance</Text>
-    </>
-  );
-}
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// function Stat() {
+//   return (
+//     <>
+//       <Text>Distance</Text>
+//     </>
+//   );
+// }
 
 export default function App() {
   return (
-    <Flex w="full" direction={"column"} align="center" gap={"10px"}>
-      <NavBar />
-      <Flex direction="row" gap="10px">
-        <Flex>A</Flex>
-        <Flex>A</Flex>
-        <Flex>A</Flex>
-      </Flex>
+    <Router>
+      <div className="main-container">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/content" element={<Content />} />
+        </Routes>
+      </div>
+    </Router>
 
-      {/* <Stat />
-      <Image
-        src="https://i.stack.imgur.com/wIPlH.jpg"
-        alt="Prototype map"
-        width="50%"
-        rounded="lg"
-      /> */}
-    </Flex>
+    // <Flex w="full" direction={"column"} align="center" gap={"0px"}>
+    //   <NavBar />
+    //   <Flex direction="row" gap="10px" w="full">
+    //     <Flex bg="yellow.100" width="full" direction="column" align="center">
+    //       Profile
+    //     </Flex>
+    //     <Flex bg="yellow.100" width="full" direction="column" align="center">
+    //       Feed
+    //     </Flex>
+    //     <Flex bg="yellow.100" width="full" direction="column" align="center">
+    //       Challenges
+    //     </Flex>
+    //   </Flex>
+
+    //   {/* <Stat />
+    //   <Image
+    //     src="https://i.stack.imgur.com/wIPlH.jpg"
+    //     alt="Prototype map"
+    //     width="50%"
+    //     rounded="lg"
+    //   /> */}
+    // </Flex>
   );
 }
