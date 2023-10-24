@@ -1,8 +1,11 @@
+import { Flex, Text, Image } from "@chakra-ui/react";
+import { NavBar } from "./NavBar";
+
 export function Content() {
   return (
     <div>
       <Flex w="full" direction={"column"} align="center" gap={"0px"}>
-        <NavBar />
+        {/* <NavBar /> */}
         <Flex direction="row" gap="10px" w="full">
           <Flex bg="yellow.100" width="full" direction="column" align="center">
             Profile

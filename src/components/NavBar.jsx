@@ -32,8 +32,19 @@ export function NavBar() {
       <Button onClick={toggleColorMode} colorScheme="pink">
         Switch to {toggleText} mode
       </Button>
-      {/* <Link to="/register">Register</Link>
-      <Link to="/login">Login</Link> */}
+
+      <Link to="/register">
+        <Button colorScheme="blue">Register</Button>
+      </Link>
+
+      <Link to="/login">
+        <Button colorScheme="blue">Login</Button>
+      </Link>
+
+      <Link to="/content">
+        <Button colorScheme="blue">Content</Button>
+      </Link>
+
       <Avatar name="Rocky Wu" src="" />
     </Flex>
   );

@@ -1,4 +1,4 @@
-import { Flex, Text, Image } from "@chakra-ui/react";
+//import { Flex, Text, Image } from "@chakra-ui/react";
 import { NavBar } from "./components/NavBar";
 import { Login } from "./components/login";
 import { Content } from "./components/content";
@@ -20,7 +20,7 @@ export default function App() {
       <div className="main-container">
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/content" element={<Content />} />
