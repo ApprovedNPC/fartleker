@@ -28,7 +28,6 @@ export function NavBar() {
       <Heading size="md">Fartleker</Heading>
       <Spacer />
       <Button colorScheme="teal">Notifications</Button>
-      <Button colorScheme="orange">Log in</Button>
       <Button onClick={toggleColorMode} colorScheme="pink">
         Switch to {toggleText} mode
       </Button>

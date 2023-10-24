@@ -17,15 +17,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 export default function App() {
   return (
     <Router>
-      <div className="main-container">
-        <NavBar />
-        <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/content" element={<Content />} />
-        </Routes>
-      </div>
+      <NavBar />
+      <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/content" element={<Content />} />
+      </Routes>
     </Router>
 
     // <Flex w="full" direction={"column"} align="center" gap={"0px"}>
