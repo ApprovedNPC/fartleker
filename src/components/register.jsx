@@ -14,8 +14,9 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Link,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 
@@ -34,8 +35,8 @@ export function Register() {
           <Heading fontSize={"4xl"} textAlign={"center"}>
             Sign up
           </Heading>
-          <Text fontSize={"lg"} color={"gray.600"}>
-            to enjoy all of our cool features ✌️
+          <Text fontSize={"lg"} color={"gray.650"}>
+            to get started on your running journey today!
           </Text>
         </Stack>
         <Box
@@ -94,7 +95,10 @@ export function Register() {
             </Stack>
             <Stack pt={6}>
               <Text align={"center"}>
-                Already a user? <Link color={"blue.400"}>Login</Link>
+                Already a user?{" "}
+                <ChakraLink color={"blue.400"} as={Link} to="/login">
+                  Login
+                </ChakraLink>
               </Text>
             </Stack>
           </Stack>
