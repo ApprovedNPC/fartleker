@@ -7,13 +7,16 @@ import {
   useColorModeValue,
   useColorMode,
 } from "@chakra-ui/react";
-
+import "boxicons";
 import { Link, useNavigate } from "react-router-dom";
 
 export function NavBar() {
   const navColor = useColorModeValue("gray.100", "gray.900");
   const { toggleColorMode } = useColorMode();
-  const toggleText = useColorModeValue("dark", "light");
+  const toggleText = useColorModeValue(
+    <box-icon name="moon"></box-icon>,
+    <box-icon name="sun"></box-icon>
+  );
 
   return (
     <Flex
@@ -27,11 +30,12 @@ export function NavBar() {
     >
       <Heading size="md">Fartleker</Heading>
       <Spacer />
-      <Button colorScheme="teal">Notifications</Button>
-      <Button onClick={toggleColorMode} colorScheme="pink">
-        Switch to {toggleText} mode
+      <Button colorScheme="teal">
+        <box-icon name="bell"></box-icon>
       </Button>
-
+      <Button onClick={toggleColorMode} colorScheme="pink">
+        {toggleText}
+      </Button>
       <Link to="/register">
         <Button colorScheme="blue">Register</Button>
       </Link>
