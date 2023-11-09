@@ -1,6 +1,6 @@
-import { Flex, Text, Image, Card } from "@chakra-ui/react";
+import { Flex, Text, Image } from "@chakra-ui/react";
 import { NavBar } from "./NavBar";
-import ProfilePage from "./Profile";
+
 export function Content() {
   return (
     <div>
@@ -33,37 +33,6 @@ export function Content() {
             color="black"
           >
             Challenges
-          </Flex>
-        </Flex>
-
-        <Flex direction="row" gap="10px" w="full">
-          <Flex
-            bg={"white"}
-            width="full"
-            direction="column"
-            align="center"
-            color="black"
-          >
-            <ProfilePage />
-            <Card />
-          </Flex>
-          <Flex
-            bg={"white"}
-            width="full"
-            direction="column"
-            align="center"
-            color="black"
-          >
-            users
-          </Flex>
-          <Flex
-            bg={"white"}
-            width="full"
-            direction="column"
-            align="center"
-            color="black"
-          >
-            Training Plans
           </Flex>
         </Flex>
 
